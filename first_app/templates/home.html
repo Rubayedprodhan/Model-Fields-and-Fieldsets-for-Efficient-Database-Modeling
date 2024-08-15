@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+  </head>
+  <body>
+    <h1>Home page</h1>
+    {% if students %}
+      {% for st in students %}
+        <p>Name :{{ st.name }}</p>  
+        <p>Roll :{{ st.roll }}</p>  
+        <p>Father Name :{{ st.father_name }}</p>  
+        <p>Address :{{ st.address }}</p>  
+        <p>Big Interger :{{ st.big_integer_field }}</p>  
+        <p>Binary :{{ st.binary_field }}</p>  
+        <p>Boolean :{{ st.boolean_field }}</p>  
+        <p>Char :{{ st.char_field }}</p>  
+        <p>Data :{{ st.date_field }}</p>  
+        <p>Data Time :{{ st.date_time_field}}</p>  
+        <p>Decimal :{{ st.decimal_field}}</p>  
+        <p>Duration :{{ st.duration_field}}</p>         
+        <p>Email :{{ st.email_field}}</p>  
+        <p>Float :{{ st.float_field}}</p>  
+        <p>Foreign :{{ st.foreign_key}}</p>  
+        <p>Foreign :{{ st.foreign_key}}</p>  
+        <p>One To One Field :{{ st.one_to_one_field}}</p>  
+        <p>Generic IP address :{{ st.generic_ip_address_field}}</p>  
+        <p>Image :{{ st.image_field}}</p>  
+        <p><img src="{{ st.image_field}}" alt="Image"></p>
+        <p>Interget :{{ st.integer_field}}</p>  
+        <p>Json :{{ st.json_field}}</p>  
+        <p>Many To Many :{{ st.many_to_many_field}}</p>  
+        <p>Null Boolean :{{ st.null_boolean_field}}</p>  
+        <p>Positive Big Interger :{{ st.positive_big_integer_field}}</p>  
+        <p>Positive Integer :{{ st.positive_integer_field}}</p>  
+        <p>Positive Small Integer :{{ st.positive_small_integer_field}}</p>  
+        <p>Slug :{{ st.slug_field}}</p>  
+        <p>Small Interger :{{ st.small_integer_field}}</p>  
+        <p>Text :{{ st.text_field}}</p>  
+        <p>Time :{{ st.time_field}}</p>  
+        <p>Url :{{ st.url_field}}</p>  
+        <p>UUID{{ st.uuid_field}}</p>  
+
+
+
+      {% endfor %}
+    {% else %}
+      <p>No data available.</p>
+    {% endif %}
+  </body>
+</html>
